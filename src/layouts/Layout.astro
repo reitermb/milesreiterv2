@@ -1,14 +1,27 @@
+
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Miles Reiter</title>
 	</head>
 	<body>
 		<slot />
+    <script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+<script>
+  // With the above scripts loaded, you can call `tippy()` with a CSS
+  // selector and a `content` prop:
+  tippy('#tanf', {
+    content: 'Temporary Assistance for Needy Families',
+    theme: 'light',
+    animation: 'scale',
+  });
+</script>
 	</body>
 </html>
 
@@ -128,6 +141,22 @@ h1 {
 
   
 }
+
+.tippy-box[data-theme='default'] {
+  background-color: var(--vscode-menu-background);
+  color: var(--vscode-badge-foreground);
+  border: 1px solid var(--vscode-editorWidget-border);
+  border-radius: 0.15rem;
+  padding: 0.5rem;
+  word-wrap: break-word;
+}
+
+h2 {
+		font-family: Newsreader, serif;
+		font-size: 3.5em;
+		font-weight: 900;
+		line-height: 1em;
+	}
 
 .comboh2 {
   font-family: Lato,sans-serif;

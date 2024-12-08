@@ -1,5 +1,8 @@
 ---
 import background from '../assets/backgroundnoise.svg';
+import "tippy.js/dist/tippy.css";
+
+
 
 ---
 
@@ -12,13 +15,15 @@ import background from '../assets/backgroundnoise.svg';
 			</h1></div>
 			<h2>Senior User Researcher & Designer</h2>
 			<p>
-				I lead research & design on Raft's project partnering with the US Department of Health and Human Services. We're redesigning and modernizing TANF¹ Data Reporting tools used by every US state, tribe, and territory.  
+				I lead research & design on <a href="">Raft's project</a> partnering with the US Department of Health and Human Services. We're redesigning and modernizing <a href="" id="tanf" [tip] class="tooltip">TANF¹</a> Data Reporting tools used by every US state, tribe, and territory.  
 			</p>
 			<p>
 				Before my move to the world of GovTech, I spent three years working with early-stage b2b startups in hybrid UX & Product Management roles. I built user research practices from the ground up, led cross-functional teams in data-backed decision making, and aimed strategy at positive outcomes—not just outputs.
 			</p>
 			<section id="links">
-				
+				<a class="link-button button-green">Resumé</a>
+				<a class="link-button button-mint">Approach</a>
+				<a class="link-button button-blue">Work</a>
 			</section>
 		</section>
 	</main>
@@ -64,8 +69,8 @@ import background from '../assets/backgroundnoise.svg';
 
 	h1 {
 		font-family: Newsreader,serif;
-		font-size: 3.3em;
-		line-height: 1em;
+		font-size: 5em;
+		line-height: .7em;
 		margin-top: 0.25em;
 		font-weight: 900;
 		text-shadow: -2px -2px 0 #fffcf3, 0 -2px 0 #fffcf3, 2px -2px 0 #fffcf3, 2px 0 0 #fffcf3, 2px 2px 0 #fffcf3, 0 2px 0 #fffcf3, -2px 2px 0 #fffcf3, -2px 0 0 #fffcf3;
@@ -77,7 +82,9 @@ import background from '../assets/backgroundnoise.svg';
 
 
 	h2 {
-		font-size: 2.5em;
+		font-family: Newsreader, serif;
+		font-size: 1.92em !important;
+		font-weight: 700 !important;
 		line-height: 1em;
 	}
 
@@ -86,37 +93,17 @@ import background from '../assets/backgroundnoise.svg';
 		gap: 16px;
 	}
 
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
+	a {
+		color: #2d8654;
+		font-weight: 600;
+		text-decoration: underline;
+	}
+
+	.tooltip {
 		text-decoration: none;
-		transition: color 0.2s;
 	}
 
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
 
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
 
 	pre {
 		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
@@ -137,9 +124,10 @@ import background from '../assets/backgroundnoise.svg';
 	}
 
 	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
+		color: #333;
+		font-family: Lato, sans-serif;
+		font-size: 1.5em;
+		margin-bottom: 1.5em !important;
 		letter-spacing: -0.006em;
 		margin: 0;
 	}
@@ -196,10 +184,6 @@ import background from '../assets/backgroundnoise.svg';
 			flex-wrap: wrap;
 		}
 
-		#links a.button {
-			padding: 14px 18px;
-		}
-
 		#news {
 			right: 16px;
 			left: 16px;
@@ -207,8 +191,61 @@ import background from '../assets/backgroundnoise.svg';
 			max-width: 100%;
 		}
 
-		h1 {
-			line-height: 1.5;
-		}
+		
+
+
 	}
+
+	.link-button {
+    cursor: pointer;
+    border-radius: 12px;
+    margin-right: 10px;
+    padding: 14px 30px;
+    font-family: Lato,sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    transform: scale(1.02);
+}
+
+.button-green {
+    color: #29461f;
+    background-color: #e3ffc4;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);
+    border: 2px solid #8db81e;
+}
+
+.button-green:hover {
+    box-shadow: 0 9px 7px -5px #77a364;
+}
+
+
+
+.button-mint {
+    color: #0f572d;
+    background-color: #c6ffde;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);
+    border: 2px solid #50c482;
+
+}
+
+.button-mint:hover {
+    box-shadow: 0 9px 7px -5px #4f9772;
+}
+
+
+.button-blue {
+    color: #29535a;
+    background-color: #c3ffff;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);
+    border: 2px solid #58c8db;
+}
+
+.button-blue:hover {
+    box-shadow: 0 9px 7px -5px #5b94a8;
+}
 </style>
