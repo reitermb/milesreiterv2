@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Miles Reiter</title>
 	</head>
 	<body>
 		<slot />
@@ -14,9 +14,164 @@
 
 <style>
 	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+	@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url(./fonts/Lato-Regular.ttf) format(opentype);
+}
+
+
+body {
+  background-image: url('../public/images/nnnoise-1.svg');
+  background-position: 0 0;
+  background-size: auto;
+  border-radius: 0;
+  transition: all .2s;
+  margin: auto;
+  width: 60%;
+  max-width: 1400px;
+}
+
+p {
+  float: left;
+  clear: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  overflow: visible;
+}
+
+a {
+  color: #2d8654;
+  font-weight: 700;
+  display: inline;
+}
+
+img {
+  float: none;
+  clear: none;
+  max-width: 100%;
+  display: inline-block;
+}
+
+div-spacer {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+link-button {
+    cursor: pointer;
+    border-radius: 12px;
+    margin-right: 16px;
+    padding: 18px 30px;
+    font-family: Lato,sans-serif;
+    font-size: 1.3em;
+    font-weight: 900;
+    transition: all .2s ease-in-out,border-radius .2s ease-in-out,box-shadow .2s ease-in-out;
+    text-decoration: none;
+}
+
+link-button:hover {
+    transform: scale(1.02);
+}
+
+button-green {
+    color: #29461f;
+    background-color: #e3ffc4;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);
+    border: 2px solid #8db81e;
+}
+
+button-green:hover {
+    box-shadow: 0 9px 7px -5px #77a364;
+}
+
+
+
+button-mint {
+    color: #0f572d;
+    background-color: #c6ffde;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);
+    border: 2px solid #50c482;
+
+}
+
+button-mint:hover {
+    box-shadow: 0 9px 7px -5px #4f9772;
+}
+
+
+button-blue {
+    color: #29535a;
+    background-color: #c3ffff;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);
+    border: 2px solid #58c8db;
+}
+
+button-blue:hover {
+    box-shadow: 0 9px 7px -5px #5b94a8;
+}
+
+h1 {
+      text-shadow: -2px -2px 0 #fffcf3, 0 -2px 0 #fffcf3, 2px -2px 0 #fffcf3, 2px 0 0 #fffcf3, 2px 2px 0 #fffcf3, 0 2px 0 #fffcf3, -2px 2px 0 #fffcf3, -2px 0 0 #fffcf3;
+              width: 100%;
+        z-index: -1;
+        margin-top: 100px;
+/*        height: 12px;
+        background: -webkit-linear-gradient(to right, #d8ffac, #acffcf, #acffff);
+        background: linear-gradient(to right, #d8ffac, #acffcf, #acffff);*/
+    font-size: 3.5em;
+    margin-bottom: -10px;
+
+  
+}
+
+.comboh2 {
+  font-family: Lato,sans-serif;
+  font-size: 1.38em;
+  margin-top: 0;
+  font-weight: 900;
+
+}
+
+
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+h3 {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+
+section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  position: relative;
+}
+
+underliner {
+  border-bottom: 12px solid transparent;
+  border-image: linear-gradient(to right, #d8ffac, #acffcf, #acffff);
+  border-image-slice: 1;
+  margin-bottom: 16px;
+}
+
+
 </style>
